@@ -1,0 +1,24 @@
+Package: geosimilarity
+Type: Package
+Title: Geographically Optimal Similarity
+Date: 2022-05-13
+Version: 1.1
+Authors@R: person("Yongze Song", email = "yongze.song@postgrad.curtin.edu.au",
+                  comment = c(ORCID = "0000-0003-3420-9622"),
+                  role = c("aut", "cre"))
+Maintainer: Yongze Song <yongze.song@postgrad.curtin.edu.au>
+Description: Spatial prediction can be performed based on the geographical   
+             similarity theory. Geographically optimal similarity (GOS) model is
+             a generalized model for accurate and reliable spatial prediction
+             based on the geographical similarity theory.
+Imports: stats, SecDim
+Depends: R (>= 4.1.0)
+License: GPL-2
+RoxygenNote: 7.1.2
+LazyData: true
+Encoding: UTF-8
+NeedsCompilation: no
+Packaged: 2022-05-14 07:55:23 UTC; 268222H
+Author: Yongze Song [aut, cre] (<https://orcid.org/0000-0003-3420-9622>)
+Repository: CRAN
+Date/Publication: 2022-05-17 16:20:06 UTC
