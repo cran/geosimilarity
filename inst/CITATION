@@ -1,0 +1,11 @@
+citHeader("To cite geosimilarity Package in publications use:")
+
+bibentry(
+ bibtype="Article",
+ title="Geographically optimal similarity",
+ journal="Mathematical Geosciences",
+ year="2022",
+ author="Yongze Song",
+ doi="10.1007/s11004-022-10036-8")
+
+

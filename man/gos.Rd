@@ -9,7 +9,7 @@ gos(formula, data = NULL, newdata = NULL, kappa = 0.25)
 \arguments{
 \item{formula}{A formula of GOS model}
 
-\item{data}{A data.frame of observations data}
+\item{data}{A data.frame of observation data}
 
 \item{newdata}{A data.frame of prediction variables data}
 
@@ -36,7 +36,7 @@ hist(zn$Zn)
 require(SecDim)
 k <- rmvoutlier(zn$Zn, coef = 2.5)
 dt <- zn[-k,]
-# split data for validation
+# split data for validation: 70\% training; 30\% testing
 split <- sample(1:nrow(dt), round(nrow(dt)*0.7))
 train <- dt[split,]
 test <- dt[-split,]
@@ -47,5 +47,4 @@ g1 <- gos(Zn ~ Slope + Water + NDVI  + SOC + pH + Road + Mine,
 test$pred <- g1$pred
 plot(test$Zn, test$pred)
 cor(test$Zn, test$pred)
-
 }

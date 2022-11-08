@@ -5,7 +5,7 @@
 #' @usage gos(formula, data = NULL, newdata = NULL, kappa = 0.25)
 #'
 #' @param formula A formula of GOS model
-#' @param data A data.frame of observations data
+#' @param data A data.frame of observation data
 #' @param newdata A data.frame of prediction variables data
 #' @param kappa A numeric value of the percentage of observation locations
 #'              with high similarity to a prediction location.
@@ -29,7 +29,7 @@
 #' require(SecDim)
 #' k <- rmvoutlier(zn$Zn, coef = 2.5)
 #' dt <- zn[-k,]
-#' # split data for validation
+#' # split data for validation: 70% training; 30% testing
 #' split <- sample(1:nrow(dt), round(nrow(dt)*0.7))
 #' train <- dt[split,]
 #' test <- dt[-split,]
@@ -40,7 +40,6 @@
 #' test$pred <- g1$pred
 #' plot(test$Zn, test$pred)
 #' cor(test$Zn, test$pred)
-#'
 #' @export
 
 
