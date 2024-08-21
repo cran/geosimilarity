@@ -1,12 +1,17 @@
 Package: geosimilarity
-Type: Package
 Title: Geographically Optimal Similarity
-Date: 2022-11-08
-Version: 2.2
-Authors@R: person("Yongze Song", email = "yongze.song@outlook.com",
-                  comment = c(ORCID = "0000-0003-3420-9622"),
-                  role = c("aut", "cre"))
-Maintainer: Yongze Song <yongze.song@outlook.com>
+Version: 3.0
+Authors@R: 
+    c(
+      person(given = "Yongze", family = "Song",
+             email = "yongze.song@outlook.com", 
+             role = c("aut", "cph"),
+             comment = c(ORCID = "0000-0003-3420-9622")),
+      person(given = "Wenbo", family = "Lv",
+             email = "lyu.geosocial@gmail.com", 
+             role = c("aut", "cre"),
+             comment = c(ORCID = "0009-0002-6003-3800"))
+     )
 Description: Understanding spatial association is essential for spatial 
              statistical inference, including factor exploration and spatial prediction. 
              Geographically optimal similarity (GOS) model is an effective method 
@@ -16,16 +21,24 @@ Description: Understanding spatial association is essential for spatial
              <doi:10.1080/19475683.2018.1534890>. GOS has advantages in 
              more accurate spatial prediction using fewer samples and 
              critically reduced prediction uncertainty. 
-Imports: stats, SecDim, DescTools, ggplot2, dplyr, ggrepel
-Depends: R (>= 4.1.0)
-License: GPL-2
-RoxygenNote: 7.2.1
-LazyData: true
+License: GPL-3
 Encoding: UTF-8
-Suggests: knitr, rmarkdown
+RoxygenNote: 7.3.2
+URL: https://github.com/ausgis/geosimilarity,
+        https://ausgis.github.io/geosimilarity/
+BugReports: https://github.com/ausgis/geosimilarity/issues
+Depends: R (>= 4.1.0)
+Imports: stats, parallel, tibble, dplyr (>= 1.1.0), purrr, ggplot2,
+        magrittr, ggrepel
+Suggests: knitr, tidyverse, cowplot, viridis, car, SecDim, DescTools,
+        PerformanceAnalytics, testthat (>= 3.0.0)
+LazyData: true
 VignetteBuilder: knitr
+Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2022-11-08 14:10:13 UTC; 268222h
-Author: Yongze Song [aut, cre] (<https://orcid.org/0000-0003-3420-9622>)
+Packaged: 2024-08-21 09:39:36 UTC; dell
+Author: Yongze Song [aut, cph] (<https://orcid.org/0000-0003-3420-9622>),
+  Wenbo Lv [aut, cre] (<https://orcid.org/0009-0002-6003-3800>)
+Maintainer: Wenbo Lv <lyu.geosocial@gmail.com>
 Repository: CRAN
-Date/Publication: 2022-11-08 16:00:02 UTC
+Date/Publication: 2024-08-21 11:40:05 UTC

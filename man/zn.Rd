@@ -5,7 +5,7 @@
 \alias{zn}
 \title{Spatial datasets of trace element Zn.}
 \format{
-\code{zn}: A data frame of trace element Zn with 894 rows and 12 variables
+\code{zn}: A tibble of trace element Zn with 894 rows and 12 variables
 }
 \usage{
 zn
@@ -14,7 +14,7 @@ zn
 Spatial datasets of trace element Zn.
 }
 \author{
-Yongze Song \email{yongze.song@curtin.edu.au}
+Yongze Song \email{yongze.song@outlook.com}
 }
 \keyword{dataset}
 \keyword{elements}

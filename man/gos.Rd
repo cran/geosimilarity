@@ -2,29 +2,41 @@
 % Please edit documentation in R/gos.R
 \name{gos}
 \alias{gos}
-\title{Geographically optimal similarity}
+\title{geographically optimal similarity}
 \usage{
-gos(formula, data = NULL, newdata = NULL, kappa = 0.25)
+gos(formula, data = NULL, newdata = NULL, kappa = 0.25, cores = 1)
 }
 \arguments{
-\item{formula}{A formula of GOS model}
+\item{formula}{A formula of GOS model.}
 
-\item{data}{A data.frame of observation data}
+\item{data}{A data.frame or tibble of observation data.}
 
-\item{newdata}{A data.frame of prediction variables data}
+\item{newdata}{A data.frame or tibble of prediction variables data.}
 
-\item{kappa}{A numeric value of the percentage of observation locations
-with high similarity to a prediction location.
-kappa = 1 - tau, where tau is the probability parameter
-in quantile operator. The default kappa is 0.25, meaning
-that 25% of observations with high similarity to a prediction
-location are used for modelling.}
+\item{kappa}{(optional) A numeric value of the percentage of observation locations
+with high similarity to a prediction location. \eqn{kappa = 1 - tau}, where \code{tau} is
+the probability parameter in quantile operator. The default kappa is 0.25, meaning
+that 25\% of observations with high similarity to a prediction location are used for
+modelling.}
+
+\item{cores}{(optional) Positive integer. If cores > 1, a \code{parallel} package
+cluster with that many cores is created and used. You can also supply a cluster
+object. Default is \code{1}.}
 }
 \value{
-A list of predictions and uncertainties.
+A tibble made up of predictions and uncertainties.
+\describe{
+\item{\code{pred}}{GOS model prediction results}
+\item{\code{uncertainty90}}{uncertainty under 0.9 quantile}
+\item{\code{uncertainty95}}{uncertainty under 0.95 quantile}
+\item{\code{uncertainty99}}{uncertainty under 0.99 quantile}
+\item{\code{uncertainty99.5}}{uncertainty under 0.995 quantile}
+\item{\code{uncertainty99.9}}{uncertainty under 0.999 quantile}
+\item{\code{uncertainty100}}{uncertainty under 1 quantile}
+}
 }
 \description{
-Function for geographically optimal similarity (GOS) model
+Computationally optimized function for geographically optimal similarity (GOS) model
 }
 \examples{
 data("zn")
@@ -33,18 +45,22 @@ hist(zn$Zn)
 zn$Zn <- log(zn$Zn)
 hist(zn$Zn)
 # remove outliers
-require(SecDim)
+library(SecDim)
 k <- rmvoutlier(zn$Zn, coef = 2.5)
 dt <- zn[-k,]
 # split data for validation: 70\% training; 30\% testing
 split <- sample(1:nrow(dt), round(nrow(dt)*0.7))
 train <- dt[split,]
 test <- dt[-split,]
-system.time({ # 0.33s
+system.time({
 g1 <- gos(Zn ~ Slope + Water + NDVI  + SOC + pH + Road + Mine,
-           data = train, newdata = test, kappa = 0.25)
+          data = train, newdata = test, kappa = 0.25, cores = 1)
 })
 test$pred <- g1$pred
 plot(test$Zn, test$pred)
 cor(test$Zn, test$pred)
+
+}
+\references{
+Song, Y. (2022). Geographically Optimal Similarity. Mathematical Geosciences. doi: 10.1007/s11004-022-10036-8.
 }

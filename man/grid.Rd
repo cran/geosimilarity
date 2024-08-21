@@ -5,7 +5,7 @@
 \alias{grid}
 \title{Spatial grid data of explanatory variables.}
 \format{
-\code{grid}: A data frame of grided trace element explanatory variables
+\code{grid}: A tibble of grided trace element explanatory variables
 with 13132 rows and 12 variables, where the first column is ID.
 }
 \usage{
@@ -15,7 +15,7 @@ grid
 Spatial grid data of explanatory variables.
 }
 \author{
-Yongze Song \email{yongze.song@curtin.edu.au}
+Yongze Song \email{yongze.song@outlook.com}
 }
 \keyword{dataset}
 \keyword{elements}
