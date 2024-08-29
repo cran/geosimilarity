@@ -1,6 +1,6 @@
 Package: geosimilarity
 Title: Geographically Optimal Similarity
-Version: 3.0
+Version: 3.1
 Authors@R: 
     c(
       person(given = "Yongze", family = "Song",
@@ -36,9 +36,9 @@ LazyData: true
 VignetteBuilder: knitr
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2024-08-21 09:39:36 UTC; dell
+Packaged: 2024-08-29 07:42:30 UTC; dell
 Author: Yongze Song [aut, cph] (<https://orcid.org/0000-0003-3420-9622>),
   Wenbo Lv [aut, cre] (<https://orcid.org/0009-0002-6003-3800>)
 Maintainer: Wenbo Lv <lyu.geosocial@gmail.com>
 Repository: CRAN
-Date/Publication: 2024-08-21 11:40:05 UTC
+Date/Publication: 2024-08-29 08:00:02 UTC
