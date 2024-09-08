@@ -1,3 +1,11 @@
+# geosimilarity 3.2
+
+* Add `removeoutlier()` function.
+
+* Drop Suggests dependency of `SecDim` package.
+
+* Use the correct version number in package attachment information.
+
 # geosimilarity 3.1
 
 * Automatically loaded the `tibble` namespace when the package is loaded.

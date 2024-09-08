@@ -3,4 +3,5 @@
 export("%>%")
 export(gos)
 export(gos_bestkappa)
+export(removeoutlier)
 importFrom(magrittr,"%>%")
