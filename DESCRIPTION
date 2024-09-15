@@ -1,6 +1,6 @@
 Package: geosimilarity
 Title: Geographically Optimal Similarity
-Version: 3.2
+Version: 3.3
 Authors@R: 
     c(
       person(given = "Yongze", family = "Song",
@@ -30,15 +30,15 @@ BugReports: https://github.com/ausgis/geosimilarity/issues
 Depends: R (>= 4.1.0)
 Imports: stats, parallel, tibble, dplyr (>= 1.1.0), purrr, ggplot2,
         magrittr, ggrepel
-Suggests: knitr, tidyverse, cowplot, viridis, car, DescTools,
-        PerformanceAnalytics, testthat (>= 3.0.0)
+Suggests: knitr, cowplot, viridis, car, DescTools,
+        PerformanceAnalytics, testthat (>= 3.0.0), rmarkdown
 LazyData: true
 VignetteBuilder: knitr
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2024-09-08 14:52:24 UTC; dell
+Packaged: 2024-09-15 03:42:13 UTC; dell
 Author: Yongze Song [aut, cph] (<https://orcid.org/0000-0003-3420-9622>),
   Wenbo Lv [aut, cre] (<https://orcid.org/0009-0002-6003-3800>)
 Maintainer: Wenbo Lv <lyu.geosocial@gmail.com>
 Repository: CRAN
-Date/Publication: 2024-09-08 15:10:02 UTC
+Date/Publication: 2024-09-15 04:00:02 UTC

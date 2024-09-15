@@ -5,7 +5,7 @@ output:
     fig_caption: true
     self_contained: yes
 vignette: >
-  %\VignetteIndexEntry{GOS}
+  %\VignetteIndexEntry{geosimilarity}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -99,14 +99,7 @@ hist(zn$Zn)
 ``` r
 
 # remove outliers
-library(SecDim)
-## This is `SecDim` package.
-##                         
-## To cite `SecDim` in publications, please use:
-##                         
-## Song, Y. (2022). The second dimension of spatial association. International Journal of Applied Earth Observation and Geoinformation. 2022. 111, 102834. doi: 10.1016/j.jag.2022.102834.
-## 
-k <- rmvoutlier(zn$Zn, coef = 2.5)
+k <- removeoutlier(zn$Zn, coef = 2.5)
 ## Remove 9 outlier(s)
 dt <- zn[-k,]
 
@@ -135,11 +128,6 @@ chart.Correlation(cor_dt, histogram = TRUE, pch = 19)
 # multicollinearity
 library(car)
 ## Loading required package: carData
-## 
-## Attaching package: 'car'
-## The following object is masked from 'package:SecDim':
-## 
-##     vif
 m1 <- lm(Zn ~ Slope + Water + NDVI + SOC + pH + Road + Mine, data = dt)
 car::vif(m1)
 ##    Slope    Water     NDVI      SOC       pH     Road     Mine 
@@ -164,7 +152,7 @@ b1 <- gos_bestkappa(Zn ~ Slope + Water + NDVI  + SOC + pH + Road + Mine,
                     cores = 1)
 })
 ##    user  system elapsed 
-##    3.64    0.08    4.57
+##    2.53    0.08    4.91
 b1$bestkappa
 ## [1] 0.1
 b1$cvmean
@@ -186,7 +174,7 @@ b2 <- gos_bestkappa(Zn ~ Slope + Water + NDVI  + SOC + pH + Road + Mine,
                     cores = 6)
 })
 ##    user  system elapsed 
-##    0.06    0.00   17.13
+##    0.04    0.02   17.15
 b2$bestkappa
 ## [1] 0.08
 b2$cvmean
@@ -232,7 +220,7 @@ g2 <- gos(Zn ~ Slope + Water + NDVI  + SOC + pH + Road + Mine,
           data = dt, newdata = grid, kappa = 0.08, cores = 6)
 })
 ##    user  system elapsed 
-##     0.0     0.0     4.5
+##    0.00    0.00    5.47
 grid$pred <- exp(g2$pred)
 grid$uc99 <- g2$`uncertainty99`
 

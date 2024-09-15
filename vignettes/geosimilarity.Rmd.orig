@@ -5,7 +5,7 @@ output:
     fig_caption: true
     self_contained: yes
 vignette: >
-  %\VignetteIndexEntry{GOS}
+  %\VignetteIndexEntry{geosimilarity}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -83,8 +83,7 @@ zn$Zn <- log(zn$Zn)
 hist(zn$Zn)
 
 # remove outliers
-library(SecDim)
-k <- rmvoutlier(zn$Zn, coef = 2.5)
+k <- removeoutlier(zn$Zn, coef = 2.5)
 dt <- zn[-k,]
 
 # correlation
