@@ -381,7 +381,9 @@ explanatory variables at sample locations</p></li>
 <li><p><code>grid</code>: Spatial grid data of explanatory variables
 used for the prediction</p></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;geosimilarity&quot;</span>, <span class="at">dependencies =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;geosimilarity&quot;</span>, <span class="at">dependencies =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="co"># or run the following code:</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;geosimilarity&quot;</span>, <span class="at">dep =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">library</span>(geosimilarity)</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">data</span>(<span class="st">&quot;zn&quot;</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="fu">head</span>(zn)</span>
@@ -455,7 +457,7 @@ parameter</em></p>
 <span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>                    <span class="at">cores =</span> <span class="dv">1</span>)</span>
 <span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>})</span>
 <span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="do">##    user  system elapsed </span></span>
-<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a><span class="do">##    3.12    0.06    4.67</span></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a><span class="do">##    3.42    0.08    4.67</span></span>
 <span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>b1<span class="sc">$</span>bestkappa</span>
 <span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a><span class="do">## [1] 0.1</span></span>
 <span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>b1<span class="sc">$</span>cvmean</span>
@@ -477,7 +479,7 @@ parameter</em></p>
 <span id="cb7-28"><a href="#cb7-28" tabindex="-1"></a>                    <span class="at">cores =</span> <span class="dv">6</span>)</span>
 <span id="cb7-29"><a href="#cb7-29" tabindex="-1"></a>})</span>
 <span id="cb7-30"><a href="#cb7-30" tabindex="-1"></a><span class="do">##    user  system elapsed </span></span>
-<span id="cb7-31"><a href="#cb7-31" tabindex="-1"></a><span class="do">##    0.04    0.03   16.32</span></span>
+<span id="cb7-31"><a href="#cb7-31" tabindex="-1"></a><span class="do">##    0.05    0.00   17.17</span></span>
 <span id="cb7-32"><a href="#cb7-32" tabindex="-1"></a>b2<span class="sc">$</span>bestkappa</span>
 <span id="cb7-33"><a href="#cb7-33" tabindex="-1"></a><span class="do">## [1] 0.08</span></span>
 <span id="cb7-34"><a href="#cb7-34" tabindex="-1"></a>b2<span class="sc">$</span>cvmean</span>
@@ -526,7 +528,7 @@ optional <code>kappa</code> is (0.01, 0.02, …, 0.09, 0.1, 0.2, …, 1) and
 <span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>          <span class="at">data =</span> dt, <span class="at">newdata =</span> grid, <span class="at">kappa =</span> <span class="fl">0.08</span>, <span class="at">cores =</span> <span class="dv">6</span>)</span>
 <span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>})</span>
 <span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="do">##    user  system elapsed </span></span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="do">##    0.05    0.03    5.60</span></span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="do">##    0.06    0.00    5.53</span></span>
 <span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>grid<span class="sc">$</span>pred <span class="ot">&lt;-</span> <span class="fu">exp</span>(g2<span class="sc">$</span>pred)</span>
 <span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>grid<span class="sc">$</span>uc99 <span class="ot">&lt;-</span> g2<span class="sc">$</span><span class="st">`</span><span class="at">uncertainty99</span><span class="st">`</span></span>
 <span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a></span>
