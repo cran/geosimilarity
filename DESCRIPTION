@@ -1,6 +1,6 @@
 Package: geosimilarity
 Title: Geographically Optimal Similarity
-Version: 3.7
+Version: 3.8
 Authors@R: 
     c(
       person(given = "Yongze", family = "Song",
@@ -23,22 +23,22 @@ Description: Understanding spatial association is essential for spatial
              critically reduced prediction uncertainty. 
 License: GPL-3
 Encoding: UTF-8
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 URL: https://github.com/ausgis/geosimilarity,
         https://ausgis.github.io/geosimilarity/
 BugReports: https://github.com/ausgis/geosimilarity/issues
 Depends: R (>= 4.1.0)
 Imports: stats, parallel, tibble, dplyr (>= 1.1.0), purrr, ggplot2,
         magrittr, ggrepel
-Suggests: knitr, cowplot, viridis, car, DescTools,
-        PerformanceAnalytics, testthat (>= 3.0.0), rmarkdown
+Suggests: cowplot, viridis, car, DescTools, PerformanceAnalytics,
+        testthat (>= 3.0.0), sdsfun, rmarkdown, knitr
 LazyData: true
 VignetteBuilder: knitr
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2024-10-17 16:40:23 UTC; dell
-Author: Yongze Song [aut, cph] (<https://orcid.org/0000-0003-3420-9622>),
-  Wenbo Lv [aut, cre] (<https://orcid.org/0009-0002-6003-3800>)
+Packaged: 2025-09-23 01:41:38 UTC; 31809
+Author: Yongze Song [aut, cph] (ORCID: <https://orcid.org/0000-0003-3420-9622>),
+  Wenbo Lv [aut, cre] (ORCID: <https://orcid.org/0009-0002-6003-3800>)
 Maintainer: Wenbo Lv <lyu.geosocial@gmail.com>
 Repository: CRAN
-Date/Publication: 2024-10-17 16:50:02 UTC
+Date/Publication: 2025-09-23 02:20:02 UTC
