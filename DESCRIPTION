@@ -1,13 +1,13 @@
 Package: geosimilarity
 Title: Geographically Optimal Similarity
-Version: 3.8
+Version: 3.9
 Authors@R: 
     c(
       person(given = "Yongze", family = "Song",
              email = "yongze.song@outlook.com", 
              role = c("aut", "cph"),
              comment = c(ORCID = "0000-0003-3420-9622")),
-      person(given = "Wenbo", family = "Lv",
+      person(given = "Wenbo", family = "Lyu",
              email = "lyu.geosocial@gmail.com", 
              role = c("aut", "cre"),
              comment = c(ORCID = "0009-0002-6003-3800"))
@@ -36,9 +36,9 @@ LazyData: true
 VignetteBuilder: knitr
 Config/testthat/edition: 3
 NeedsCompilation: no
-Packaged: 2025-09-23 01:41:38 UTC; 31809
+Packaged: 2026-03-27 04:47:40 UTC; 31809
 Author: Yongze Song [aut, cph] (ORCID: <https://orcid.org/0000-0003-3420-9622>),
-  Wenbo Lv [aut, cre] (ORCID: <https://orcid.org/0009-0002-6003-3800>)
-Maintainer: Wenbo Lv <lyu.geosocial@gmail.com>
+  Wenbo Lyu [aut, cre] (ORCID: <https://orcid.org/0009-0002-6003-3800>)
+Maintainer: Wenbo Lyu <lyu.geosocial@gmail.com>
 Repository: CRAN
-Date/Publication: 2025-09-23 02:20:02 UTC
+Date/Publication: 2026-03-27 15:50:02 UTC
